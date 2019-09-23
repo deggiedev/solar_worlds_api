@@ -42,8 +42,8 @@ class PlanetsController < ApplicationController
         planet = Planet.find(params[:id])
     end
        
-    def player_params
-         params.require(:planet).permit(:name, :moond, :image, :discovered_by, :discovery_date)
+    def planet_params
+         params.require(:planet).permit(:name, :moons, :image, :discovered_by, :discovery_date)
     end
 
 end

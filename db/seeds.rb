@@ -52,4 +52,10 @@
     #        discovery_date: planet["discoveryDate"])
     #end
 
+    user2 = User.create(username: 'fay', password: 'password', progress: 60)
+    planet1 = Planet.create(name: 'testplanet', moons: 'testmoon', image: 'url.com', discovered_by: 'me', discovery_date: "1990")
+    question1 = Question.create!(question: 'sup?', planet_id: 1)
+    answer1 = Answer.create(answer: 'test answer', image1: 'url.com', image2: 'url.com', image3: 'url.com', image4: 'url.com', didyouknow: 'something', question_id: 1)
+    read1 = Read.create(answer_id: 2, user_id: 1, count: 1)
+
 puts 'seeded'
