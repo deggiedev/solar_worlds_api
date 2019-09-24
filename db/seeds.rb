@@ -6,56 +6,82 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#Test Seeds
-#user1 = User.create(username: 'jack', password_digest: 'password', progress: 0)
-#planet1 = Planet.create(name: 'pandora', moons: 'none', image: 'url.com', discovered_by: 'unknown', discovery_date: 'unknown')
-#question1 = Question.create(question: 'how big is pandora?', planet_id: 1)
-#answer1 = Answer.create(answer: 'large', image1: 'url.com', image2: 'url.com', image3: 'url.com', image4: 'url.com', didyouknow: 'pandora is from the movie avatar', question_id: 1)
-#read1 = Read.create(answer_id: 1, user_id: 1, count: 3)
-
-#puts 'seeded'
-
-# Planet Bodies API call
-    #require 'uri'
-    #require 'net/http'
-    #require 'openssl'
-
-    #url = URI("https://api.le-systeme-solaire.net/rest.php/bodies?filter[]=isPlanet,neq,false
-    #&filter%5B%5D=isPlanet%2Cneq%2Cfalse%0A")
-
-    #http = Net::HTTP.new(url.host, url.port)
-    #http.use_ssl = true
-    #http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-    #request = Net::HTTP::Get.new(url)
-    #request["User-Agent"] = 'PostmanRuntime/7.16.3'
-    #request["Accept"] = '*/*'
-    #request["Cache-Control"] = 'no-cache'
-    #request["Postman-Token"] = '550171f9-f64a-478d-be83-f6415bd56a2e,e88437eb-ea55-4e1f-a036-2f6e795a2a43'
-    #request["Host"] = 'api.le-systeme-solaire.net'
-    #request["Accept-Encoding"] = 'gzip, deflate'
-    #request["Cookie"] = 'SERVERID102299=220124|XYONN|XYOND'
-    #request["Connection"] = 'keep-alive'
-    #request["cache-control"] = 'no-cache'
-
-    #response = http.request(request)
-    #puts response.read_body
-
-    #planet_array = JSON.parse(response.body)["bodies"]
-
-    #planet_array.each do |planet|
-    #    Planet.create(
-    #        name: planet["englishName"],
-    #        moons: planet["moons"],
-    #        image: "url.com",
-    #        discovered_by: planet["discoveredBy"],
-    #        discovery_date: planet["discoveryDate"])
-    #end
-
+    #Test User
     user2 = User.create(username: 'fay', password: 'password', progress: 60)
-    planet1 = Planet.create(name: 'testplanet', moons: 'testmoon', image: 'url.com', discovered_by: 'me', discovery_date: "1990")
-    question1 = Question.create!(question: 'sup?', planet_id: 1)
-    answer1 = Answer.create(answer: 'test answer', image1: 'url.com', image2: 'url.com', image3: 'url.com', image4: 'url.com', didyouknow: 'something', question_id: 1)
-    read1 = Read.create(answer_id: 2, user_id: 1, count: 1)
 
-puts 'seeded'
+    #Question Content
+    uranus_q_1 = Question.create!(question: 'What is Uranus made of?')
+    uranus_q_2 = Question.create!(question: 'Why is Uranus on its side?')
+    uranus_q_3 = Question.create!(question: 'Have we ever been to Uranus?')
+
+    pluto_q_1 = Question.create!(question: 'Why is Pluto not considered a planet?')
+    pluto_q_2 = Question.create!(question: 'Pluto is in the kuiper belt, where is this?')
+    pluto_q_3 = Question.create!(question: "Have we ever been to Pluto?")
+
+    neptune_q_1 = Question.create!(question: "Is Neptune really a windy planet?")
+    neptune_q_2 = Question.create!(question: "Why is Neptune blue?")
+    neptune_q_3 = Question.create!(question: 'Have we ever been to Neptune?')
+
+    jupiter_q_1 = Question.create!(question: 'Are there oceans on Moons of Jupiter?')
+    jupiter_q_2 = Question.create!(question: "What is Jupiter's great red spot?")
+    jupiter_q_3 = Question.create!(question: 'Have we ever been to Jupiter?')
+
+    mars_q_1 = Question.create!(question: 'Was Mars once like our planet?')
+    mars_q_2 = Question.create!(question: 'What is Mars made of?')
+    mars_q_3 = Question.create!(question: 'Have we ever been to Mars?')
+
+    mercury_q_1 = Question.create!(question: 'How long is a day on Mercury?')
+    mercury_q_2 = Question.create!(question: 'Why is Mercury so close to the Sun?')
+    mercury_q_3 = Question.create!(question: 'Have we ever been to Mercury?')
+
+    saturn_q_1 = Question.create!(question: 'Why is Saturns moon Titan a world of interest?')
+    saturn_q_2 = Question.create!(question: 'What are Saturns rings made out of?')
+    saturn_q_3 = Question.create!(question: 'Have we ever been to Saturn?')
+
+    earth_q_1 = Question.create!(question: 'Are there any other planets like Earth?')
+    earth_q_2 = Question.create!(question: "In Earth's orbit is the ISS, what is this?")
+    earth_q_3 = Question.create!(question: 'Are we still exploring Earth?')
+
+    venus_q_1 = Question.create!(question: 'Why is Venus considered our planets evil twin?')
+    venus_q_2 = Question.create!(question: 'Was Venus once like our planet?')
+    venus_q_3 = Question.create!(question: 'Have we ever been to Venus?')
+
+    #Answer Content
+    uranus_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 1)
+    uranus_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 2)
+    uranus_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 3)
+
+    pluto_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 4)
+    pluto_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 5)
+    pluto_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 6)
+
+    neptune_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 7)
+    neptune_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 8)
+    neptune_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 9)
+
+    jupiter_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 10)
+    jupiter_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 11)
+    jupiter_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 12)
+
+    mars_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 13)
+    mars_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 14)
+    mars_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 15)
+
+    mercury_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 16)
+    mercury_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 17)
+    mercury_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 18)
+
+    saturn_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 19)
+    saturn_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 20)
+    saturn_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 21)
+
+    earth_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 22)
+    earth_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 23)
+    earth_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 24)
+
+    venus_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 25)
+    venus_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 26)
+    venus_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '', question_id: 27)
+
+    #Seed db
+    puts 'seeded'
