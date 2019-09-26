@@ -14,19 +14,50 @@ Answer.destroy_all
 user2 = User.create(username: 'fay', password: 'password', progress: 60)
 
 #Answer Content
-uranus_a_1  = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '' ) 
-uranus_a_2  = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
-uranus_a_3  = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
+uranus_a_1  = Answer.create!(
+ answer: 'Uranus is made of water, methane, and ammonia fluids above a small rocky center.
+ Its atmosphere is made of hydrogen and helium like Jupiter and Saturn, but it also has methane. The methane makes Uranus blue.', 
+ image1: 'img.com', image2: 'image.com', image3: 'image.com', image4: 'image.com', 
+ didyouknow: 'Uranus also has faint rings. The inner rings are narrow and dark. The outer rings are brightly colored and easier to see. 
+ Like Venus, Uranus rotates in the opposite direction as most other planets. And unlike any other planet, Uranus rotates on its side.') 
+
+uranus_a_2  = Answer.create!(answer: 'Uranus is the only planet whose equator is nearly at a right angle to its orbit, with a tilt of 97.77 degrees, possibly the result of a collision with an Earth-sized object long ago. 
+This unique tilt causes the most extreme seasons in the solar system.', 
+image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', 
+didyouknow: 'Uranus hits the coldest temperatures of any planet.
+With minimum atmospheric temperature of -224°C Uranus is nearly coldest planet in the solar system. While Neptune doesn’t get as cold as Uranus it is on average colder. 
+The upper atmosphere of Uranus is covered by a methane haze which hides the storms that take place in the cloud decks.'  )
+
+uranus_a_3  = Answer.create!(answer: "Uranus was visited by NASA's Voyager 2. The spacecraft flew closely past distant Uranus, the seventh planet from the Sun, in January 1986.
+At its closest, the spacecraft came within 81,500 kilometers (50,600 miles) of Uranus's cloudtops on Jan. 24, 1986.
+Voyager 2 radioed thousands of images and voluminous amounts of other scientific data on the planet, its moons, rings, atmosphere, interior and the magnetic environment surrounding Uranus.", 
+image1: 'img.com', 
+image2: 'image.com' , 
+image3: 'image.com', 
+image4: 'image.com', 
+didyouknow: 'Uranus’ moons are named after characters created by William Shakespeare and Alexander Pope.
+These include Oberon, Titania and Miranda.  All are frozen worlds with dark surfaces. Some are ice and rock mixtures.  
+The most interesting Uranian moon is Miranda; it has ice canyons, terraces, and other strange-looking surface areas.'  )
 
 pluto_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
-pluto_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
+pluto_a_2 = Answer.create!(answer: "Pluto is a dwarf planet that lies in the Kuiper Belt, an area full of icy bodies and other dwarf planets out past Neptune. Pluto is very small, 
+only about half the width of the United States and its biggest moon Charon is about half the size of Pluto.
+Almost all the planets travel around the Sun in nearly perfect circles. But not Pluto. It takes an oval-shaped path with the Sun nowhere near its center. 
+What's more, its path is quite tilted compared to the planets.", 
+image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', 
+didyouknow: ''  )
+
 pluto_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
 
 neptune_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: '' ) 
 neptune_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
 neptune_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
 
-jupiter_a_1 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
+jupiter_a_1 = Answer.create!(answer: "Jupiter has several moons. Europa, is one of them, and is covered in a thick layer of ice. Scientists believe that oceans are hidden beneath that ice, and that they may have more in common with our own earthly ones that previously known. The Hubble Space Telescope picked up sightings of a spectral signature on Tara Regio's scars, this leads the team to believe there is an abundance of seasalt on Europa. If this is all true, and salt abounds in the oceans underneath Europa's freezing surfaces, it may mean that hydrothermal vents just like on the Earth's can also be found on the moon. ", 
+image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', 
+didyouknow: 'The ancient Babylonians were the first to record their sightings of Jupiter.
+This was around the 7th or 8th century BC. Jupiter is named after the king of the Roman gods. To the Greeks, it represented Zeus, the god of thunder. The Mesopotamians saw Jupiter as the god Marduk and patron of the city of Babylon. Germanic tribes saw this planet as Donar, or Thor.'  )
+
 jupiter_a_2 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
 jupiter_a_3 = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
 
