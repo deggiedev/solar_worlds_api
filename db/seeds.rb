@@ -9,6 +9,7 @@
 User.destroy_all
 Question.destroy_all
 Answer.destroy_all
+Read.destroy_all
 
 #Test User
 user2 = User.create(username: 'fay', password: 'password', progress: 60)
@@ -81,6 +82,8 @@ venus_a_1   = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' 
 venus_a_2   = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
 venus_a_3   = Answer.create!(answer: '', image1: 'img.com', image2: 'image.com' , image3: 'image.com', image4: 'image.com', didyouknow: ''  )
 
+read_1 = Read.create(answer_id: 460, user_id: 19, count: 1)
+
 #Question Content
 uranus_q_1 = Question.create!(question: 'What is Uranus made of?', answer_id: uranus_a_1.id)
 uranus_q_2 = Question.create!(question: 'Why is Uranus on its side?', answer_id: uranus_a_2.id)
@@ -103,7 +106,7 @@ mars_q_2 = Question.create!(question: 'What is Mars made of?', answer_id: mars_a
 mars_q_3 = Question.create!(question: 'Have we ever been to Mars?', answer_id: mars_a_3.id)
 
 mercury_q_1 = Question.create!(question: 'How long is a day on Mercury?', answer_id: mercury_a_1.id)
-mercury_q_2 = Question.create!(question: 'Why is Mercury so close to the Sun?', answer_id: mercury_a_2.id)
+mercury_q_2 = Question.create!(question: 'Why is Mercury have so many impact craters?', answer_id: mercury_a_2.id)
 mercury_q_3 = Question.create!(question: 'Have we ever been to Mercury?', answer_id: mercury_a_3.id)
 
 saturn_q_1 = Question.create!(question: 'Why is Saturns moon Titan a world of interest?', answer_id: saturn_a_1.id)

@@ -11,7 +11,7 @@ class ReadsController < ApplicationController
     end 
 
     def create
-        read = Read.new(read_params)
+        read = Read.new(answer_id: read_params[:answer_id], user: @current_user, count: read_params[:count])
     
         if read.save
           render json: read, status: :created
@@ -19,21 +19,10 @@ class ReadsController < ApplicationController
           render json: read.errors, status: :unprocessable_entity
         end
     end
-    
-    def update
-        if read.update(read_params)
-          render json: read
-        else
-          render json: read.errors, status: :unprocessable_entity
-        end
-    end
         
       private
-    def set_list
-        read = Read.find(params[:id])
-    end
-       
+  
     def read_params
-         params.require(:read).permit(:user_id, :answer_id, :count)
+         params.require(:read).permit(:answer_id, :user_id, :count)
     end
 end
